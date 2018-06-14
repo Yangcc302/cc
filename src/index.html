@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>头</header>
+        <section>
+            <div id="list">
+
+            </div>
+        </section>
+        <footer>尾</footer>
+    </div>
+    <script id="tpl" type="text/x-handlebars-template">
+
+        <dl>
+            {{#each this}}
+            <dt>{{title}}</dt>
+            <dd>
+                <img src="{{img}}" alt="">
+                <p>{{price}}</p>
+            </dd>
+            {{/each}}
+        </dl>
+
+    </script>
+    <script src="./js/libs/require.js"></script>
+    <script>
+        require(['./js/main.js'], function() {
+            require(['index'])
+        })
+    </script>
+</body>
+
+</html>
